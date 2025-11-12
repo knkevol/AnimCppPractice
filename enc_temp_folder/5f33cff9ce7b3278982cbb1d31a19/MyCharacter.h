@@ -6,9 +6,6 @@
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
-class USpringArmComponent;
-class UCameraComponent;
-
 UCLASS()
 class ANIMCPPPRACTICE_API AMyCharacter : public ACharacter
 {
@@ -29,15 +26,4 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Anim")
-	TObjectPtr<USpringArmComponent> CameraBoom;
-
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Anim")
-	TObjectPtr<UCameraComponent> FollowCamera;
-
-	UFUNCTION(BlueprintCallable)
-	void Aim(float InPitch, float InYaw);
-
-	UFUNCTION(BlueprintCallable)
-	void Move(float InPitch, float InYaw);
 };
