@@ -6,8 +6,6 @@
 #include "GameFramework/PlayerController.h"
 #include "MyPlayerController.generated.h"
 
-class UInputMappingContext;
-
 /**
  * 
  */
@@ -15,14 +13,5 @@ UCLASS()
 class ANIMCPPPRACTICE_API AMyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-
-public:
-	AMyPlayerController();
-
-	virtual void OnPossess(APawn* aPawn) override;
-	virtual void OnUnPossess() override;
-
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Anim")
-	TObjectPtr<UInputMappingContext> InputMapping;
 	
 };

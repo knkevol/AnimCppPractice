@@ -13,8 +13,5 @@ UCLASS()
 class ANIMCPPPRACTICE_API AMyGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-
-public:
-	AMyGameModeBase();
 	
 };
